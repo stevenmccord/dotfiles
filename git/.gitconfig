@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[core]
+# Please adapt and uncomment the following lines:
+	user = Steven McCord
+	email = steve@icxmedia.com
+	editor = emacs
+	excludesfile = ~/.gitignore-globals
+[push]
+	default = current
+[user]
+	name = Steven McCord
+	email = steve@icxmedia.com
+	signingkey = 7469FDE83CDF8111
+[github]
+	user = stevenmccord
+[magithub "confirm"]
+	submitPr = allow

@@ -2,14 +2,14 @@
 [core]
 # Please adapt and uncomment the following lines:
 	user = Steven McCord
-	email = steve@icxmedia.com
+	email = steven.mccord@mobileposse.com
 	editor = emacs
 	excludesfile = ~/.gitignore-globals
 [push]
 	default = current
 [user]
 	name = Steven McCord
-	email = steve@icxmedia.com
+	email = steven.mccord@mobileposse.com
 	signingkey = 7469FDE83CDF8111
 [github]
 	user = stevenmccord

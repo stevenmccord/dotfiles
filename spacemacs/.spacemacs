@@ -47,6 +47,7 @@ values."
      syntax-checking
      version-control
      vagrant
+     xclipboard
      yaml
      )
    ;; List of additional packages that will be installed without being
@@ -303,6 +304,13 @@ you should place your code here."
 
   ;; set copy and paste form the system clipboard
   (setq x-select-enable-clipboard t)
+
+  ;; Remove buffer copy and replace with system copy
+  ;; This also removes yank so that we don't mix up the system and buffer
+  ;; This is due to the fact that xclipboard does not have a cut function
+  (global-set-key (kbd "M-w") 'spacemacs/xclipboard-copy)
+  (global-set-key (kbd "C-w") 'spacemacs/xclipboard-copy)
+  (global-set-key (kbd "C-y") 'spacemacs/xclipboard-paste)
 
   ;; magithub preferences
   (use-package magithub

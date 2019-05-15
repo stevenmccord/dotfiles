@@ -23,12 +23,36 @@ modifying the variable values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ansible auto-completion better-defaults clojure docker
-     emacs-lisp erc floobits git github helm html
-     javascript markdown nginx org osx pandoc php
-     python restclient ruby-on-rails slack sql spell-checking
-     syntax-checking typescript version-control vagrant
-     xclipboard yaml )
+      ansible
+      auto-completion
+      better-defaults
+      clojure docker
+      emacs-lisp
+      erc
+      floobits
+      git
+      github
+      helm
+      html
+      javascript
+      markdown
+      nginx
+      org
+      osx
+      pandoc
+      php
+      python
+      restclient
+      ruby-on-rails
+      slack
+      sql
+      spell-checking
+      syntax-checking
+      typescript
+      version-control
+      vagrant
+      xclipboard
+      yaml )
 
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these

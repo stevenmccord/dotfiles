@@ -24,7 +24,7 @@ BREW_APPS=(ack jq node pandoc zsh zsh-completions zsh-syntax-highlighting)
 # ------------------------------------------------------------------------------
 # List of Cask applications that we want to install.  Space iterated list of
 # apps
-CASK_APPS=(google-chrome iterm2 font-fira-code)
+CASK_APPS=(google-chrome iterm2 font-fira-code emacs)
 
 run_command "Installing Oh My Zsh" "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"
 

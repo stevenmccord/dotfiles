@@ -54,8 +54,7 @@ export DISABLE_UPDATE_PROMPT=true
 # lighthouse) Add wisely, as too many plugins slow down shell startup.
 plugins=(git
          jira
-         kubectl
-         zsh-syntax-highlighting)
+         kubectl)
 
 # User configuration
 export JIRA_URL="https://mobileposse.atlassian.net"
@@ -90,8 +89,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 PATH="/Users/${USER}/perl5/bin${PATH+:}${PATH}:/test"; export PATH;
 PERL5LIB="/Users/${USER}/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/Users/${USER}/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
@@ -107,3 +104,7 @@ fi
 if [ -f '/Users/${USER}/Applications/google-cloud-sdk/completion.zsh.inc' ]; then
   . '/Users/${USER}/Applications/google-cloud-sdk/completion.zsh.inc';
 fi
+
+export TERM=xterm-256color
+
+export EMACS="*term*"

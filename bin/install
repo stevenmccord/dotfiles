@@ -19,12 +19,12 @@ run_command() {
 # ------------------------------------------------------------------------------
 # List of Brew applications that we want to install.  Space iterated list of
 # apps
-BREW_APPS=(ack zsh zsh-completions node)
+BREW_APPS=(ack jq node pandoc zsh zsh-completions zsh-syntax-highlighting)
 
 # ------------------------------------------------------------------------------
 # List of Cask applications that we want to install.  Space iterated list of
 # apps
-CASK_APPS=(google-chrome iterm2)
+CASK_APPS=(google-chrome iterm2 font-fira-code)
 
 run_command "Installing Oh My Zsh" "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"
 
@@ -40,6 +40,7 @@ run_command "Installing Homebrew..." '/usr/bin/ruby -e \
 # ------------------------------------------------------------------------------
 # Install Homebrew-Cask
 run_command "Install Homebrew-Cask" "brew tap caskroom/cask"
+run_command "Install Homebrew-Cask" "brew tap caskroom/fonts"
 
 # ------------------------------------------------------------------------------
 # Install Brew Apps
@@ -74,3 +75,12 @@ run_command "Symlinking .gitignore_globals file" "ln -sf $BASE/git/.gitignore-gl
 
 # .spacemacs
 run_command "Symlinking .spacemacs files" "ln -sf $BASE/spacemacs/.spacemacs ~/.spacemacs"
+
+# .zsh-syntax-highlighting
+run_command "Cloning zsh-syntax-highlight" "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+
+# Install prettier
+run_command "Installing prettier" "npm install -g prettier"
+
+# Install yarn
+run_command "Installing yarn" "npm install -g yarn"

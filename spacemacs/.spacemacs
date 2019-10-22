@@ -24,7 +24,7 @@ modifying the variable values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      ansible auto-completion better-defaults clojure docker
-     emacs-lisp erc floobits git helm html javascript markdown
+     emacs-lisp erc floobits git github helm html javascript markdown
      nginx org osx pandoc php python restclient ruby-on-rails
      slack sql spell-checking syntax-checking typescript
      version-control vagrant xclipboard yaml )
@@ -33,8 +33,7 @@ modifying the variable values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(magithub)
-   ;; A list of packages and/or extensions that will not be install and loaded.
+      ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -251,9 +250,6 @@ where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a
 package is loaded, you should place your code here."
 
-  ;; Set magit-debug-mode
-  ;; (setq magithub-debug-mode t)
-
   ;; Set auth-sources configuration
   (setq auth-sources '("~/.authinfo.gpg" "~/.authinfo" "~/.netrc"))
 
@@ -320,11 +316,6 @@ package is loaded, you should place your code here."
     (setq web-mode-script-padding 2))
   (add-hook 'web-mode-hook  'my-web-mode-hook)
 
-  ;; magithub preferences
-  (use-package magithub
-    :after magit
-    :ensure t
-    :config (magithub-feature-autoinject t))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -372,7 +363,7 @@ This function is called at the very end of Spacemacs initialization."
     org-pomodoro org-download org-bullets org-brain
     open-junk-file ob-restclient ob-http nginx-mode neotree mwim
     move-text monokai-theme mmm-mode minitest markdown-toc
-    magithub magit-gitflow magit-gh-pulls macrostep lorem-ipsum
+    magit-gitflow magit-gh-pulls macrostep lorem-ipsum
     livid-mode live-py-mode linum-relative link-hint
     less-css-mode js2-refactor js-doc jinja2-mode info+
     indent-guide impatient-mode hy-mode hungry-delete hl-todo
@@ -447,7 +438,7 @@ This function is called at the very end of Spacemacs initialization."
     orgit org-projectile org-present org-pomodoro org-download
     org-bullets org-brain open-junk-file ob-restclient ob-http
     nginx-mode neotree mwim move-text monokai-theme mmm-mode
-    minitest markdown-toc magithub magit-gitflow magit-gh-pulls
+    minitest markdown-toc magit-gitflow magit-gh-pulls
     macrostep lorem-ipsum livid-mode live-py-mode linum-relative
     link-hint less-css-mode js2-refactor js-doc jinja2-mode info+
     indent-guide impatient-mode hy-mode hungry-delete hl-todo

@@ -88,6 +88,7 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias mono="cd $HOME/git/whyhotel/whyhotel"
 
 PATH="/Users/${USER}/perl5/bin${PATH+:}${PATH}:/test"; export PATH;
 PERL5LIB="/Users/${USER}/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
@@ -105,6 +106,14 @@ if [ -f '/Users/${USER}/Applications/google-cloud-sdk/completion.zsh.inc' ]; the
   . '/Users/${USER}/Applications/google-cloud-sdk/completion.zsh.inc';
 fi
 
+export CLICOLOR=1
 export TERM=xterm-256color
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
 export EMACS="*term*"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"

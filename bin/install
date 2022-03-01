@@ -19,12 +19,12 @@ run_command() {
 # ------------------------------------------------------------------------------
 # List of Brew applications that we want to install.  Space iterated list of
 # apps
-BREW_APPS=(ack jq node pandoc zsh zsh-completions zsh-syntax-highlighting)
+BREW_APPS=(ack aspell cmake jq libvterm node zsh zsh-completions zsh-syntax-highlighting gnupg)
 
 # ------------------------------------------------------------------------------
 # List of Cask applications that we want to install.  Space iterated list of
 # apps
-CASK_APPS=(google-chrome iterm2 font-fira-code emacs)
+CASK_APPS=(google-chrome iterm2 font-fira-code emacs aws-vault)
 
 run_command "Installing Oh My Zsh" "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"
 
@@ -39,8 +39,8 @@ run_command "Installing Homebrew..." '/usr/bin/ruby -e \
 
 # ------------------------------------------------------------------------------
 # Install Homebrew-Cask
-run_command "Install Homebrew-Cask" "brew tap caskroom/cask"
-run_command "Install Homebrew-Cask" "brew tap caskroom/fonts"
+run_command "Install Homebrew-Cask" "brew tap homebrew/cask"
+run_command "Install Homebrew-Cask" "brew tap homebrew/cask-fonts"
 
 # ------------------------------------------------------------------------------
 # Install Brew Apps

@@ -36,8 +36,3 @@ _DS_Store
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Emac Files #
-######################
-.projectile
-/magithub

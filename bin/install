@@ -21,16 +21,7 @@ run_command() {
 # apps
 BREW_APPS=(ack aspell cmake jq libvterm node zsh zsh-completions zsh-syntax-highlighting gnupg)
 
-# ------------------------------------------------------------------------------
-# List of Cask applications that we want to install.  Space iterated list of
-# apps
-CASK_APPS=(google-chrome iterm2 font-fira-code emacs aws-vault)
-
 run_command "Installing Oh My Zsh" "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"
-
-run_command "Removing ~/.emacs.d" "rm -rf ~/.emacs.d"
-run_command "Installing Spacemacs" "git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d"
-run_command "Checking out develop Spacemacs" "cd ~/.emacs.d && git checkout develop"
 
 # --------------------------------------------------------------------------------
 # Install Homebrew
@@ -38,22 +29,10 @@ run_command "Installing Homebrew..." '/usr/bin/ruby -e \
 "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 
 # ------------------------------------------------------------------------------
-# Install Homebrew-Cask
-run_command "Install Homebrew-Cask" "brew tap homebrew/cask"
-run_command "Install Homebrew-Cask" "brew tap homebrew/cask-fonts"
-
-# ------------------------------------------------------------------------------
 # Install Brew Apps
 say "Installing the following Brew apps: ${brew_apps[@]}..."
 for app in ${BREW_APPS[@]}; do
     run_command "Install do-ack" "brew install $app"
-done
-
-# ------------------------------------------------------------------------------
-# Install Cask Apps
-say "Installing the following Brew Cask apps: ${cask_apps[@]}..."
-for app in ${CASK_APPS[@]}; do
-    run_command "Install do-ack" "brew cask install $app"
 done
 
 # ------------------------------------------------------------------------------
@@ -72,9 +51,6 @@ run_command "Symlinking .gitconfig file" "ln -sf $BASE/git/.gitconfig ~/.gitconf
 
 # .gitignore globals
 run_command "Symlinking .gitignore_globals file" "ln -sf $BASE/git/.gitignore-globals ~/.gitignore-globals"
-
-# .spacemacs
-run_command "Symlinking .spacemacs files" "ln -sf $BASE/spacemacs/.spacemacs ~/.spacemacs"
 
 # .zsh-syntax-highlighting
 run_command "Cloning zsh-syntax-highlight" "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"

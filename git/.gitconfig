@@ -10,9 +10,18 @@
 [user]
   name = Steven McCord
   email = steven.a.mccord@gmail.com
-  signingkey = 7469FDE83CDF8111
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOYARjsXxsWDhNGwKeqoczj4O14S1a2aNzkLxOER94tu
 [github]
   user = stevenmccord
   oauth-token = f402743a405f8827f27e8fd498dc6729897f3b6d
 [magithub "confirm"]
   submitPr = allow
+[credential]
+	helper = store --file /Users/smccord/.git-credentials
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+  gpgsign = true
+

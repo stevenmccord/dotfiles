@@ -13,13 +13,3 @@ This will install the following configuration files:
 + .zshrc
 + .gitconfig
 + .gitignore-globals
-+ spacemacs configuration
-+ spacemacs personal layer configuration
-
-** iTerm2 Preferences/Profiles
-
-In order to bring in the configuration for iTerm2, you will need to go into your
-preferences and check the boxes "Load preferences from a custom folder or URL"
-as well as the "Save changes to folder when iTerm2 quits".
-
-[[img/iterm-preferences.png]]
